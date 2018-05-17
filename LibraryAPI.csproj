@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="ColorApp.cs" />
     <Compile Include="DateTimeApp.cs" />
+    <Compile Include="EncryptApp.cs" />
     <Compile Include="EnumApp.cs" />
     <Compile Include="Json.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

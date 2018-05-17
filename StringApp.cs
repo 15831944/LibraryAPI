@@ -13,8 +13,23 @@ namespace LibraryAPI
         /// <returns></returns>
         public string NumberToString(int number, bool isCaps)
         {
-            Char c = (Char)((isCaps ? 65 : 97) + (number - 1));
+            char c = (char)((isCaps ? 65 : 97) + (number - 1));
             return c.ToString();
+        }
+        public string NumberToExcelColumnName(int columnNumber)
+        {
+            int dividend = columnNumber;
+            string columnName = string.Empty;
+            int modulo;
+
+            while (dividend > 0)
+            {
+                modulo = (dividend - 1) % 26;
+                columnName = Convert.ToChar(65 + modulo).ToString() + columnName;
+                dividend = (dividend - modulo) / 26;
+            }
+
+            return columnName;
         }
     }
 }
